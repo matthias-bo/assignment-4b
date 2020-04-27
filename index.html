@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>4b assignment </title>
+    <meta charset="utf-8">
+    <meta name="description" content="My calculator webpage">
+    <meta name="keywords" content="Math">
+    <meta name="author" content="Matthias Bo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="circle.css">
+    </head>
+    <body>
+    <h1>Matthias's area and circumference calculator!</h1>
+    <p><i>To find the area of the circle, put the diameter into this box</i></p>
+    <br>
+    <input type="text" id="diameter1">
+    <button id="calcarea">Click to find area of circle</button>
+    <br>
+    <p><i>To find the circumference of the circle, put the diameter into this box</i></p>
+    <input type="text" id="diameter2">
+    <button id="calccircumference">Click to find circumference of circle</button>
+    <script>
+    let diameter;
+    let circumference;
+    let area;
+
+    document.getElementById("calcarea").addEventListener("click", myfunction);
+    function myfunction() {
+    diameter = document.getElementById("diameter1").value;
+    diameter = +diameter;
+    let radius = diameter/2;
+    let π = 3.14;
+    area = π*radius*radius;
+    alert(area);
+}
+    document.getElementById("calccircumference").addEventListener("click", myfunction1);
+    function myfunction1() {
+    diameter = document.getElementById("diameter2").value;
+    diameter = +diameter;
+    let radius = diameter/2;
+    let π = 3.14;
+    circumference = 2*π*radius;
+    alert(circumference);
+}
+
+    </script>
+    </body>
+</html>
